@@ -1618,3 +1618,143 @@ case 67:
             break;
     }
 } while (opcao != 0);
+
+
+//lista 2 
+
+int opcao;
+
+do
+{
+    Console.Clear();
+    Console.WriteLine("======================MENU=============================");
+    Console.WriteLine("1 - Média Aritmética de Alunos");
+    Console.WriteLine("2 - Maior e Menor Valor");
+    Console.WriteLine("3 - Simulador de Cofre com Tentativas Limitadas");
+    Console.WriteLine("4 - Simulação de Rendimento Financeiro");
+    Console.WriteLine("5 -  Triângulo de Asteriscos (Laços Aninhados)");
+    Console.WriteLine("0 - Sair");
+    Console.WriteLine("===================================================");
+
+    Console.Write("Escolha uma opção:");
+    opcao = Convert.ToInt32(Console.ReadLine());
+
+
+    switch (opcao)
+    {
+        case 1:
+            int nota1, soma_total1 = 0, media_aritmetica1 = 0;
+
+            Console.WriteLine("Quantas notas deseja lançar?");
+            nota1 = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= nota1; i++)
+            {
+                Console.WriteLine($"Informe a {i}ºnota:");
+                nota1 = Convert.ToInt32(Console.ReadLine());
+                soma_total1 = soma_total1 + i;
+               
+            }
+            media_aritmetica1 = soma_total1 / nota1;
+
+            Console.WriteLine($"A média aritmética é {nota1}");
+            
+
+        break;
+        case 2:
+            int numero, maior , menor = 0;
+            Console.Write("Informe o 1º número: ");
+            numero = Convert.ToInt32(Console.ReadLine());
+            maior = numero;
+            menor = numero;
+
+            for (int i = 2; i <= 8; i++)
+            {
+                Console.Write($"Informe o {i}º número: ");
+                numero = Convert.ToInt32(Console.ReadLine());
+
+                if (numero > maior)
+                    maior = numero;
+               
+            }
+            for(int i = 2; i <= 8; i++)
+            {
+                if (numero < menor)
+                    menor = numero;
+            }
+            
+            Console.WriteLine($"O maior número é {maior} e o menor é {menor}");
+            break;
+        case 3:
+            int senha = 321;
+            int tentativas = 1;
+
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine("tente adivinhar a senha correta:");
+                tentativas = Convert.ToInt32(Console.ReadLine());
+
+                if (tentativas == senha)
+                {
+                    Console.WriteLine("Acesso liberado!");
+                    break;
+                }
+            }
+                if (tentativas != senha)
+            {
+                Console.WriteLine("Varias tentativas incorretas, entre em contato com o ADM!");
+            }
+            break;
+
+        case 4:
+            double qnt_acumulada = 0;
+            double deposito = 0;
+            double juro = 0;
+            Console.WriteLine("Informe o depósito mensal:");
+            deposito = Convert.ToDouble(Console.ReadLine());
+            qnt_acumulada = deposito;
+
+            Console.WriteLine("Informe a taxa de juros mensalmente:");
+            juro = Convert.ToDouble(Console.ReadLine());
+            juro = juro / 100;
+            for (int i = 1; i <= 12; i++)
+            {
+                qnt_acumulada = qnt_acumulada + deposito * juro;
+            }
+            Console.WriteLine($"A quantidade acumulada é : {qnt_acumulada :F2} ");
+         
+
+
+
+
+
+
+            
+
+                break;
+
+        case 5:
+            int N;
+            Console.WriteLine("Quantas linhas terá o triângulo ?");
+            N = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                for(int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            break;
+        case 0:
+            Console.WriteLine("Encerrando programa...");
+            break;
+        default:
+            Console.WriteLine("Opção inválida tente novamente!");
+            break;
+        
+    }
+  Console.ReadKey();
+} while (opcao != 0);
+
