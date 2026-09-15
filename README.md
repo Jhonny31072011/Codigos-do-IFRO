@@ -1757,4 +1757,162 @@ do
     }
   Console.ReadKey();
 } while (opcao != 0);
+/*
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace Lista_2_Exercicios
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            //Exercício 1 - Imprimindo ao inverso
+
+            int[] numeros1 = new int[10];
+
+            for (int i = 0; i < numeros1.Length; i++)
+            {
+                Console.WriteLine($"Digite o {i + 1} número:");
+                numeros1[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Elementos na ordem inversa:");
+
+            for (int i = numeros1.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(numeros1[i]);
+            }
+
+            //Exercício 4 - Intercalando vetores
+
+
+            int[] vetor1 = new int[5];
+            int[] vetor2 = new int[5];
+            int[] vetorResultante = new int[10];
+
+            // Leitura do primeiro vetor
+            Console.WriteLine("Digite 5 números inteiros para o primeiro vetor:");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write($"Vetor 1, posição {i}: ");
+                vetor1[i] = int.Parse(Console.ReadLine());
+            }
+
+            // Leitura do segundo vetor
+            Console.WriteLine("\nDigite 5 números inteiros para o segundo vetor:");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write($"Vetor 2, posição {i}: ");
+                vetor2[i] = int.Parse(Console.ReadLine());
+            }
+
+            // Intercalação dos valores do vetor
+            for (int i = 0; i < 5; i++)
+            {
+                vetorResultante[2 * i] = vetor1[i];       // Posições pares (0, 2, 4, 6, 8)
+                vetorResultante[2 * i + 1] = vetor2[i];   // Posições ímpares (1, 3, 5, 7, 9)
+            }
+
+            // Exibição do vetor resultante
+            Console.WriteLine("\nVetor Intercalado:");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(vetorResultante[i] + " ");
+            }
+            Console.WriteLine();
+
+
+
+
+
+            //Exercício 2 - Operação com vetores
+            // Definição do tamanho dos vetores
+            const int TAMANHO = 20;
+
+            // Declaração dos 5 vetores
+            int[] vetor3 = new int[TAMANHO];
+            int[] vetor4 = new int[TAMANHO];
+            int[] vetorDiferenca = new int[TAMANHO];
+            int[] vetorSoma = new int[TAMANHO];
+            int[] vetorMultiplicacao = new int[TAMANHO];
+
+            // Leitura do Primeiro Vetor
+            Console.WriteLine($"Digite os {TAMANHO} números do PRIMEIRO vetor:");
+            for (int i = 0; i < TAMANHO; i++)
+            {
+                Console.Write($"Elemento [{i}]: ");
+                vetor1[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+
+            // Leitura do Segundo Vetor
+            Console.WriteLine($"Digite os {TAMANHO} números do SEGUNDO vetor:");
+            for (int i = 0; i < TAMANHO; i++)
+            {
+                Console.Write($"Elemento [{i}]: ");
+                vetor4[i] = int.Parse(Console.ReadLine());
+            }
+
+            // Processamento das operações (Diferença, Soma e Multiplicação)
+            for (int i = 0; i < TAMANHO; i++)
+            {
+                vetorDiferenca[i] = vetor3[i] - vetor4[i];
+                vetorSoma[i] = vetor3[i] + vetor4[i];
+                vetorMultiplicacao[i] = vetor3[i] * vetor4[i];
+            }
+
+            // Exibição dos resultados
+            Console.WriteLine("\n--- RESULTADOS ---");
+
+            Console.WriteLine("\nVetor 1: " + string.Join(", ", vetor3));
+            Console.WriteLine("Vetor 2: " + string.Join(", ", vetor4));
+
+            Console.WriteLine("\nVetor 3 (Diferença): " + string.Join(", ", vetorDiferenca));
+            Console.WriteLine("Vetor 4 (Soma):      " + string.Join(", ", vetorSoma));
+            Console.WriteLine("Vetor 5 (Multiplicar): " + string.Join(", ", vetorMultiplicacao));
+
+
+
+
+            //Exercício 3 - Procurando a posição
+            int[] numeros = new int[20];
+
+           
+                for (int i = 0; i < numeros.Length; i++)
+                {
+                    Console.WriteLine($"Digite o {i + 1}º número: (Somente números de 1 a 25) ");
+                    numeros[i] = Convert.ToInt32(Console.ReadLine());
+                }
+            
+            
+
+            Console.WriteLine($"\n Digite o número que deseja buscar no vetor:");
+            int busca = int.Parse(Console.ReadLine());
+
+            int contagem = 0;
+
+            foreach (int num in numeros)
+            {
+                if(num==busca)
+                {
+                    contagem++;
+                }
+            }
+
+            Console.WriteLine($"O número {busca} parece {contagem} vezes no vetor!");
+
+
+            
+
+          
+        }
+    }
+}
+*/
