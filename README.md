@@ -1909,7 +1909,63 @@ namespace Lista_2_Exercicios
             Console.WriteLine($"O número {busca} parece {contagem} vezes no vetor!");
 
 
+            using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula_2_30_10_Matrizes
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            int soma = 0;
+            int linha = 3;
+            int coluna = 3;
+            int[,] matriz = new int[linha, coluna];
+            for (int i = 0; i < linha; i++)
+            {
+                for (int j = 0; j < coluna; j++)
+                {
+                    Console.WriteLine($"Informe o valor da linha {i} coluna {j}:");
+                    matriz[i,j] = Convert.ToInt32(Console.ReadLine());
+                    soma = soma + matriz[i, j];
+                }
+            }
+
             
+            Console.WriteLine("Exibindo a soma dos elementos da matriz:");
+            Console.WriteLine(soma);
+
+            //Sempre fazer cáculos como, soma e outro tipos de acumulações dentro de segundo For.
+            */
+            double media = 0;
+            int soma1 = 0;
+            int linha1 = 2;
+            int coluna1 = 2;
+            int[,] matriz01 = new int[linha1, coluna1];
+            for (int i = 0; i < linha1; i++)
+            {
+                for (int j = 0; j < coluna1; j++)
+                {
+                    Console.WriteLine($"Informe o valor da linha {i} coluna {j}:");
+                    matriz01[i, j] = Convert.ToInt32(Console.ReadLine());
+                    soma1 = soma1 + matriz01[i, j];
+                }
+            }
+
+            media = (media + soma1) / 4;
+
+            Console.WriteLine($"Média: {media}");
+
+
+        }
+    }
+}
+
 
           
         }
