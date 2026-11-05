@@ -1965,6 +1965,225 @@ namespace Aula_2_30_10_Matrizes
         }
     }
 }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula_3_Matrizes_05_11_2026
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            int soma = 0;
+            int linha = 3;
+            int coluna = 3;
+            int[,] matriz = new int[linha, coluna];
+            for (int i = 0; i < linha; i++)
+            {
+                for (int j = 0; j < coluna; j++)
+                {
+                    Console.WriteLine($"Informe o valor da linha {i} coluna {j}:");
+                    matriz[i, j] = Convert.ToInt32(Console.ReadLine());
+                    soma = soma + matriz[i, j];
+                }
+            }
+
+
+            Console.WriteLine("Exibindo a soma dos elementos da matriz:");
+            Console.WriteLine(soma);
+
+            //Sempre fazer cáculos como, soma e outro tipos de acumulações dentro de segundo For.
+
+            double media = 0;
+            int soma1 = 0;
+            int linha1 = 2;
+            int coluna1 = 2;
+            int[,] matriz01 = new int[linha1, coluna1];
+            for (int i = 0; i < linha1; i++)
+            {
+                for (int j = 0; j < coluna1; j++)
+                {
+                    Console.WriteLine($"Informe o valor da linha {i} coluna {j}:");
+                    matriz01[i, j] = Convert.ToInt32(Console.ReadLine());
+                    soma1 = soma1 + matriz01[i, j];
+                }
+            }
+
+            media = (media + soma1) / 4;
+
+            Console.WriteLine($"Média: {media}");
+            
+            //Exercício 3 
+
+            int linha2 = 3;
+            int coluna2 = 3;
+
+            int[,] matriz3 = new int[linha2, coluna2];
+
+            Console.WriteLine($"** Gerando matriz {linha2} x {coluna2} **");
+
+            for (int i = 0; i < linha2; i++)
+            {
+                for (int j = 0; j < coluna2; j++)
+                {
+                    Console.WriteLine($"Insira o valor da linha {i} e {j}");
+                    matriz3[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("Imprimindo os valores da diagonal principal:");
+
+            for (int i = 0; i < linha2; i++)
+            {
+                for (int j = 0; j < coluna2; j++)
+                {
+                    if(i==j)
+                    {
+                        Console.WriteLine($"Linha {i}, coluna {j}: {matriz3[i,j]}");
+                    }
+                }
+            }
+
+            
+
+            //Exercício 4 
+
+            int linha3 = 4;
+            int coluna3 = 4;
+            int soma = 0;
+
+            int[,] matriz4 = new int[linha3, coluna3];
+
+            Console.WriteLine($"** Gerando matriz {linha3} x {coluna3} **");
+
+            for (int i = 0; i < linha3; i++)
+            {
+                for (int j = 0; j < coluna3; j++)
+                {
+                    Console.WriteLine($"Insira o valor da linha {i} e {j}");
+                    matriz4[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < linha3; i++)
+            {
+                for (int j = 0; j < coluna3; j++)
+                {
+                    if (i + j == linha3 - 1)
+                    {
+                        Console.WriteLine($"Linha {i}, coluna {j}: {matriz4[i, j]}");
+                        soma = soma + matriz4[i, j];
+
+                    }
+                }
+
+             }
+            
+           
+            Console.WriteLine($"A soma dos elementos da diagonal secundária é: {soma}");
+            
+
+            
+            int vezes = 0;
+            int linhas = 5;
+            int colunas = 5;
+            int[,] matriz67 = new int[linhas, colunas];
+            Random aleatorio = new Random();
+
+            for (int i = 0; i < linhas; i++)
+            {
+                for (int j = 0; j < colunas; j++)
+                {
+                
+                    matriz67[i, j] = aleatorio.Next(0, 50);
+                }
+            }
+
+            Console.WriteLine("Imprimindo a matriz:");
+
+            for (int i = 0; i < linhas; i++)
+            {
+                for (int j = 0; j < colunas; j++)
+                {
+                    Console.Write($"|{matriz67[i,j]}| ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Informe um valor a ser encontrado:");
+            int palpite = Convert.ToInt32(Console.ReadLine());
+
+            int qual_linha, qual_coluna;
+
+            for(int i = 0; i < linhas;i++)
+            {
+                for(int j = 0; j < colunas;j++)
+                {
+                    if (palpite == matriz67[i, j])
+                    {
+                        vezes++;
+                    }
+                    if (palpite == matriz67[i,j])
+                    {
+                        qual_linha = i;
+                        qual_coluna = j;
+
+                        Console.WriteLine($"O valor {palpite} está na linha {qual_linha} e na coluna {qual_coluna}");
+                    }
+                }
+            }
+            Console.WriteLine($"O número {palpite} foi encontrado {vezes} vezes na matriz");
+           
+            if (palpite == -1)
+
+                Console.WriteLine($"o valor {palpite} não foi encontrado na matriz:");
+
+            */
+            int soma1 = 0;
+            int linhas = 4;
+            int colunas = 4;
+            int[,] matriz61 = new int[linhas, colunas];
+            Random aleatorio = new Random();
+
+            for (int i = 0; i < linhas; i++)
+            {
+                for (int j = 0; j < colunas; j++)
+                {
+
+                    matriz61[i, j] = aleatorio.Next(0, 25);
+                }
+            }
+
+            Console.WriteLine("Imprimindo a matriz:");
+
+            for (int i = 0; i < linhas; i++)
+            {
+                for (int j = 0; j < colunas; j++)
+                {
+                    Console.Write($"|{matriz61[i, j]}| ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Somando a matriz:");
+
+            for (int i = 0; i < linhas; i++)
+            {
+                soma1 = 0;
+                for (int j = 0; j < colunas; j++)
+                {
+                    soma1 = soma1 + matriz61[i, j];
+                }
+                Console.WriteLine($"A soma da linha {i} é: {soma1}");
+            }
+
+        }
+    }
+}
 
 
           
